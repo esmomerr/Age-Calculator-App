@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --purple: hsl(259, 100%, 65%);
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --light-red: hsl(0, 100%, 67%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Poppins;
+    background-color: var(--off-white);
+    color: var(--off-black);
+}
+
+.age-calculator{
+    background-color: var(--white);
+    padding: 36px;
+    padding-inline: 18px;
+    border-radius: 18px;
+}
+
+.age_form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.input_container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+}
+
+label{
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--smokey-grey);
+}
+
+input{
+    width: 110px;
+    padding: 12px;
+    border: 1px solid var(--light-grey);
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--off-black);
+}
+input:focus{
+    border-color: var(--purple);
+    outline: none;
+}
+input::placeholder{
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--smokey-grey);
+    opacity: 1;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+button{
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+}
+button img{
+    display: block;
+    background-color: var(--purple);
+    border-radius: 50%;
+    padding: 5px;
+    transition: all 300ms ease-in-out;
+}
+button img:hover{
+    background-color: var(--off-black);
+}
+
+.result_text{
+    font-size: 36px;
+    font-weight: 800;
+    font-style: italic;
+    color: var(--off-black);
+}
+
+.result_value{
+    color: var(--purple);
+}
+
+.error_message {
+    color: var(--light-red);
+    font-size: 12px;
+    font-weight: 500;
+    visibility: hidden;
+}
+
+@media(width > 560px){
+    .age-calculator{
+        padding: 68px;
+        border-bottom-right-radius: 30%;
+    }
+    .age_form{
+        flex-direction: row;
+        gap: 24px;
+    }
+    label{
+        font-size: 12px;
+    }
+    input{
+        font-size: 14px;
+    }
+    input::placeholder{
+        font-size: 16px;
+    }
+    button img{
+        padding: 10px;
+    }
+    .result_text{
+        font-size: 56px;
+    }
+}

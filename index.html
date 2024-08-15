@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="assets/CSS/style.css">
+
+    <link rel="website icon" href="assets/img/icon-arrow.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="age-calculator">
+        <form class="age_form">
+            <div class="input_container">
+                <label for="day">DAY</label>
+                <input type="number" id="day" placeholder="DD" required>
+                <small id="dayError" class="error_message"></small>
+            </div>
+            <div class="input_container">
+                <label for="month">MONTH</label>
+                <input type="number" id="month" placeholder="MM" required>
+                <small id="monthError" class="error_message"></small>
+            </div>
+            <div class="input_container">
+                <label for="year">YEAR</label>
+                <input type="number" id="year" placeholder="YY" required>
+                <small id="yearError" class="error_message"></small>
+            </div>
+
+            <button type="submit"><img src="assets/img/icon-arrow.svg" alt=""></button>
+        </form>
+
+        <div class="result">
+            <p class="result_text"><span id="years" class="result_value">- -</span> years</p>
+            <p class="result_text"><span id="months" class="result_value">- -</span> months</p>
+            <p class="result_text"><span id="days" class="result_value">- -</span> days</p>
+        </div>
+    </div>
+    <script src="assets/Javascript/script.js"></script>
+</body>
+</html>
