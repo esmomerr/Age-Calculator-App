@@ -33,7 +33,7 @@ document.querySelector('.age_form').addEventListener('submit', function(e) {
     // **Yıl Doğrulaması**: Yıl değeri içinde bulunduğumuz yıldan büyük olamaz.
     const currentYear = new Date().getFullYear(); // Geçerli yıl alınır
     if (year > currentYear) {
-        document.getElementById('yearError').textContent = `Must be in the past ${currentYear}.`; // Hata mesajı ayarlanıyor
+        document.getElementById('yearError').textContent = `Must be in the past.`; // Hata mesajı ayarlanıyor
         document.getElementById('yearError').style.visibility = 'visible'; // Hata mesajı görünür yapılıyor
         isValid = false; // Geçersiz giriş olarak işaretleniyor
     }
@@ -41,7 +41,7 @@ document.querySelector('.age_form').addEventListener('submit', function(e) {
     // **Gün Doğrulaması**: Girilen ay ve yıl için geçerli gün olup olmadığını kontrol eder.
     const daysInMonth = getDaysInMonth(month, year); // Ayın gün sayısını hesapla
     if (day < 1 || day > daysInMonth) {
-        document.getElementById('dayError').textContent = `Must be a valid month`; // Hata mesajı ayarlanıyor
+        document.getElementById('dayError').textContent = `Must be a valid day`; // Hata mesajı ayarlanıyor
         document.getElementById('dayError').style.visibility = 'visible'; // Hata mesajı görünür yapılıyor
         isValid = false; // Geçersiz giriş olarak işaretleniyor
     }
